@@ -2,26 +2,31 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Justin Dedelis-Deslandes Portfolio</title>
+  <title>Justin Dedelis-Deslandes</title>
   <link rel="stylesheet" href="styles.css">
   <style>
-    
     @font-face {
       font-family: 'TitleFont';
-      src: url("Fonts/Nabla/Nabla-Regular-VariableFont_EDPT,EHLT.ttf") format('truetype');
+      src: url("Fonts/Archivo_Black/ArchivoBlack-Regular.ttf") format('truetype');
       font-weight: normal;
       font-style: normal;
     }
-@font-face {
-  font-family: 'BodyFont';
-  src: url("Fonts/Pixelify_Sans/PixelifySans-VariableFont_wght.ttf") format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
+    @font-face {
+      font-family: 'BodyFont';
+      src: url("Fonts/Science_Gothic/ScienceGothic-VariableFont_CTRS,slnt,wdth,wght.ttf") format('truetype');
+      font-weight: normal;
+      font-style: normal;
+    }
+ @font-face {
+      font-family: 'HeadFont';
+      src: url("Fonts/Honk/Honk-Regular-VariableFont_MORF,SHLN.ttf") format('truetype');
+      font-weight: normal;
+      font-style: normal;
+    }
 
 
     body {
-      background-image: url("images/finaltile.png");
+      background-color: black;
       background-size: contain;       
       background-repeat: repeat; 
       background-position: center 0;
@@ -34,9 +39,9 @@
 
     h1 {
       font-family: 'TitleFont', serif; 
-      color: navy;
+      color: #f57251;
       text-align: center;   
-      font-size: 6rem;      
+      font-size: 9rem;      
       margin: 30px 0;       
       text-shadow: 2px 2px 4px rgba(0,0,0,0.3); 
     }
@@ -49,7 +54,7 @@
 
     nav a {
       text-decoration: none;
-      color: darkblue;
+      color: white;
       font-weight: bold;
       padding: 10px;
       font-size: 2.5rem;
@@ -69,26 +74,26 @@
     }
 
     p {
-  font-family: 'BodyFont', Arial, sans-serif; 
-  font-size: 3.5rem; 
-  text-align: center;
-  text-decoration: none;
-  color: rgba(85, 26, 121, 1);
-  font-weight: bold;
-  padding: 10px;
-}
-
-        .projects {
-      display: flex;
-      flex-direction: column;
-      gap: 40px;
-      padding: 40px 20px;
-      max-width: 900px;
-      margin: 0 auto;
+      font-family: 'BodyFont'; 
+      font-size: 3.5rem; 
+      text-align: center;
+      text-decoration: none;
+      color: #c4ad9d;
+      font-weight: bold;
+      padding: 10px;
     }
 
+    .projects {
+  display: grid;                  
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 40px;                      
+  padding: 40px 20px;
+  max-width: 2000px;              
+  margin: 0 auto;
+}
+
     .project {
-      background: rgba(101, 101, 101, 1);
+      background: rgba(77, 77, 77, 1);
       border-radius: 10px;
       padding: 20px;
       text-align: center;
@@ -101,9 +106,9 @@
 
     .project h2 {
       font-family: 'TitleFont', serif;
-      font-size: 4rem;
-      color: darkblue;
-      margin-bottom: 0px;
+      font-size: 2rem;
+      color: #f57251;
+      margin-bottom: 50px;
     }
 
     .project img {
@@ -114,93 +119,138 @@
     }
 
     .project p {
-      font-size: 2.5rem;
+      font-size: 1.5rem;
       line-height: 1.5;
       margin-bottom: 15px;
     }
 
     .project a {
+      background-color: #0274bd;
       display: inline-block;
       margin-top: 10px;
       text-decoration: none;
-      color: navy;
+      color: black;
       font-weight: bold;
-      font-size: 1.2rem;
+      font-size: 2rem;
     }
 
-    /* Alternating offsets using transform (halved from 720px → 360px) 
-    .project:nth-child(odd) {
-      transform: translateX(360px); 
+    .container {
+      display: flex;             
+      justify-content: center; 
+      align-items: center;        
+      width: 100%;
+      gap: 40px; 
     }
 
-    .project:nth-child(even) {
-      transform: translateX(-360px); 
+.media-container {
+  position: relative;
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+}
 
 
+.media-container img,
+.media-container video {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+  object-fit: cover;
+}
 
-    }
-  </style>
+
+.media-container video {
+  display: none;
+}
+
+
+.project:hover .media-container img {
+  display: none;
+}
+
+.project:hover .media-container video {
+  display: block;
+}
+
+</style>
 </head>
 <body>
-  <!-- Original content -->
   <h1>Justin Dedelis-Deslandes</h1>
 
   <div class="content">
     <img src="images/me.jpg" alt="Photo of Justin">
-    <p>Aspiring Game and Level design student from LaSalle College!</p>
+    <p>Game designer from LaSalle College Montreal!</p>
   </div>
 
-  
   <div class="projects">
     <div class="project">
-      <h2>Sprite of the Moon</h2>
-      <p>Solo Developper</p>
-      <img src="images\Screenshot 2025-09-07 122417.png" alt="Project 1 image">
-      <p>Reach for the moon while soaring through the skies at insane speeds in this   solo-developped UE5 platformer.</p>
-       <a href="">Itch Page</a>
-    </div>
+  <h2>Sprite of the Moon</h2>
+  <div class="media-container">
+    <img src="images/Screenshot 2025-09-07 122417.png" alt="Project 1 image">
+    <video src="Videos\MoonSprite.mp4" autoplay muted loop></video>
+  </div>
+  <p>Solo Developer</p>
+  <p>Reach for the moon while soaring through the skies at insane speeds in this solo-developed UE5 platformer.</p>
+  <a href="https://jumist3r.itch.io/sprite-of-the-moon">Itch Page</a>
+</div>
 
-    
     <div class="project">
-      <h2>Corporate Ladder</h2>
-      <p>Game Director, SFX and VFX designer</p>
-      <img src="images\Screenshot 2025-09-07 140358.png" alt="Project 2 image">
-      <p>Made in only 5 weeks for a UE5 GameJam, Corporate Ladder is a silly puzzle-solving platformer where you play as a CEO who must make his way back to his office!</p>
-      <a href="https://g1mpmeister.itch.io/corporate-ladder-inc">Itch Page</a>
-    </div>
+  <h2>Corporate Ladder</h2>
+  <div class="media-container">
+    <img src="images/Screenshot 2025-09-07 140358.png" alt="Project 2 image">
+    <video src="Videos/CorporateLadder.mp4" autoplay muted loop></video>
+  </div>
+  <p>Game Director</p>
+  <p>Made in only 5 weeks for a UE5 GameJam, Corporate Ladder is a silly puzzle-solving platformer where you play as a CEO who must make his way back to his office!</p>
+  <a href="https://g1mpmeister.itch.io/corporate-ladder-inc">Itch Page</a>
+</div>
 
-    
     <div class="project">
       <h2>Loop Automata</h2>
-      <p>Game and Level designer</p>
-      <img src="images\Screenshot 2025-09-07 140937.png" alt="Project 3 image">
+<div class="media-container">
+            <img src="images/Screenshot 2025-09-07 140937.png" alt="Project 3 image">
+<video src="Videos/LoopAutomata.mp4" autoplay muted loop></video>
+<p>Game and Level designer</p>
+</div>
       <p>Play as a robot who constantly repeats the commands you input to escape the factory where he was made! Made in only 4 days for the GMTK 2025 Gamejam using the Godot Engine.</p>
-      <a href="#">Itch Page</a>
+      <a href="https://jumist3r.itch.io/loop-automata">Itch Page</a>
     </div>
 
-    
     <div class="project">
       <h2>Night Shift</h2>
-      <p>Game and Sound designer</p>
-      <img src="images\gamerella_25_bg_desk.png" alt="Project 4 image">
+<div class="media-container">
+      <img src="images/gamerella_25_bg_desk.png" alt="Project 4 image">
+<video src="videos/nightshift.mp4" autoplay muted loop></video>
+  </div>
+<p>Game Designer</p>
       <p>In this creepy point-and-click puzzle experience, you must figure out which of three deceased patients is haunting the hospital where you work at. Made in only 2 days for the Gamerella 2025 Gamejam using Unity.</p>
       <a href="https://jumist3r.itch.io/night-shift">Itch Page</a>
     </div>
 
-    
     <div class="project">
       <h2>Echoes of the Temple</h2>
-      <p>Game and Level designer of the Spore Trial</p>
-      <img src="images\image4.png" alt="Project 5 image">
+<div class="media-container">
+      <img src="images/image4.png" alt="Project 5 image">
+<video src="Videos/EchoesOfTheTemple.mp4" autoplay muted loop></video>
+</div>
+<p>Game and Level designer of the Spore Trial</p>
       <p>An immersive first person adventure game where the player must complete different mystical trials to uncover the secrets of the temple. Made in UE5.</p>
       <a href="#">Itch Page</a>
     </div>
   </div>
-<nav>
-      <a href="https://jumist3r.itch.io/"><h1>My Itch.io page</h1></a>
-    </nav>
 
-  <!-- Parallax scroll script -->
+  <nav>
+    <div class="container">
+      <a href="https://jumist3r.itch.io/">
+        <img src="images/itchlogo.png" alt="Itch.io logo" style="width:150px; height:auto;">
+      </a>
+      <a href="https://www.linkedin.com/in/justin-dedelis-deslandes-449588346/">
+        <img src="images/linkedin.png" alt="LinkedIn logo" style="width:150px; height:auto;">
+      </a>
+    </div>
+  </nav>
+
   <script>
     window.addEventListener("scroll", function() {
       let scrollPos = window.scrollY;
@@ -209,3 +259,4 @@
   </script>
 </body>
 </html>
+
