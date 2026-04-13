@@ -12,11 +12,11 @@
     }
     @font-face {
       font-family: 'BodyFont';
-      src: url("Fonts/Science_Gothic/ScienceGothic-VariableFont.ttf") format('truetype');
+      src: url("Fonts/Science_Gothic/ScienceGothic-VariableFont_CTRS,slnt,wdth,wght.ttf") format('truetype');
     }
     @font-face {
       font-family: 'HeadFont';
-      src: url("Fonts/Honk/Honk-Regular.ttf") format('truetype');
+      src: url("Fonts/Honk/Honk-Regular-VariableFont_MORF,SHLN.ttf") format('truetype');
     }
 
     /* ---------------------- GLOBAL ---------------------- */
@@ -51,8 +51,7 @@
     }
 
     .content img {
-      width: 100%;          /* responsive */
-      max-width: 350px;     /* desktop limit */
+      width: 280px;
       height: auto;
       border-radius: 12px;
       border: 3px solid #ff6a3d;
@@ -127,7 +126,7 @@
       display: block;
     }
 
-    /* ---------------------- EXCEPTIONS ---------------------- */
+    /* ---------------------- EXCEPTION: DEATH ON AIR ---------------------- */
     .no-hover-video:hover .media-container img {
       display: block !important;
     }
@@ -227,18 +226,32 @@
       <a href="https://jumist3r.itch.io/loop-automata">Itch Page</a>
     </div>
 
-    <!-- Project 4 — STATIC -->
-    <div class="project no-hover-video">
+    <!-- Project 4 -->
+    <div class="project">
       <h2>Night Shift</h2>
       <div class="media-container">
-        <img src="images/gamerella_25_bg_desk.png" alt="Night Shift Thumbnail">
+        <img src="images/gamerella_25_bg_desk.png">
+        <video src="videos/nightshift.mp4" autoplay muted loop></video>
       </div>
       <p><strong>Game Designer</strong></p>
       <p>A creepy point-and-click puzzle where you uncover which deceased patient is haunting the hospital. Made in 2 days for Gamerella 2025.</p>
       <a href="https://jumist3r.itch.io/night-shift">Itch Page</a>
     </div>
 
-    <!-- Project 5 — STATIC -->
+<div class="project">
+      <h2>Death On Air</h2>
+<div class="media-container">
+      <img src="images/image4.png" alt="Project 5 image">
+<video src="Videos/EchoesOfTheTemple.mp4" autoplay muted loop></video>
+</div>
+<p>Enemy designer and programmer, Sound designer</p>
+      <p>A first person temple adventure where the player must uncover the secrets of their own identity. Made in UE5</p>
+      <a href="https://g1mpmeister.itch.io/echoes-of-the-temple">Itch Page</a>  
+
+<a href="Videos/DemoReelCompressed.mp4" target="_blank">Demo Reel</a>
+    </div>
+
+    <!-- Project 5 — STATIC THUMBNAIL -->
     <div class="project no-hover-video">
       <h2>Death On Air</h2>
       <div class="media-container">
@@ -248,6 +261,7 @@
       <p>An old-school horror game set in a dystopian game show where the cameras are always watching. Made in UE5.</p>
       <a href="#">Coming May 2026</a>
     </div>
+
 
   </div>
 
@@ -265,4 +279,7 @@
 
 </body>
 </html>
+
+
+
 
